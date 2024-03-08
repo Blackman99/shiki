@@ -69,7 +69,7 @@ Number.parseInt(todo.title, 10);
     },
     defaultColor: false,
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         renderer: rendererRich(),
       }),
     ],
@@ -81,7 +81,7 @@ Number.parseInt(todo.title, 10);
     lang: 'ts',
     theme: 'none',
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         renderer: rendererRich(),
       }),
     ],
@@ -108,7 +108,7 @@ todo.title = "Hello";
     lang: 'ts',
     theme: 'vitesse-light',
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         renderer: rendererRich({
           errorRendering: 'hover',
         }),
@@ -135,7 +135,7 @@ obj.boo
     theme: 'nord',
     defaultColor: false,
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         renderer: rendererRich({
           completionIcons: false,
         }),
@@ -174,7 +174,7 @@ const c = 1
     },
     defaultColor: false,
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         renderer: rendererRich(),
       }),
     ],

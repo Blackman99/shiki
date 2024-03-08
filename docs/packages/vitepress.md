@@ -30,7 +30,7 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash' // [!code hl]
 export default defineConfig({
   markdown: {
     codeTransformers: [
-      transformerTwoslash() // [!code hl]
+      await transformerTwoslash() // [!code hl]
     ]
   }
 })

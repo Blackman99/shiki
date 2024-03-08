@@ -34,7 +34,7 @@ describe('markdown-it', () => {
       },
       defaultColor: false,
       transformers: [
-        transformerTwoslash({
+        await transformerTwoslash({
           explicitTrigger: true,
           renderer: rendererRich(),
         }),
@@ -73,7 +73,7 @@ const a = 123
       defaultColor: false,
       transformers: [
         transformerMetaHighlight(),
-        transformerTwoslash({
+        await transformerTwoslash({
           explicitTrigger: true,
           renderer: rendererRich(),
         }),

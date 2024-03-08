@@ -22,7 +22,7 @@ describe('fixtures', () => {
         lang: ext,
         theme,
         transformers: [
-          transformerTwoslash({
+          await transformerTwoslash({
             renderer: rendererRich(),
           }),
         ],

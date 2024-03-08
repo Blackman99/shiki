@@ -17,9 +17,9 @@ export interface TransformerTwoslashIndexOptions extends TransformerTwoslashOpti
 /**
  * Factory function to create a Shiki transformer for twoslash integrations.
  */
-export function transformerTwoslash(options: TransformerTwoslashIndexOptions = {}) {
+export async function transformerTwoslash(options: TransformerTwoslashIndexOptions = {}) {
   return createTransformerFactory(
-    createTwoslasher({ cache: options?.cache }),
+    await createTwoslasher({ cache: options?.cache }),
     rendererRich(options.rendererRich),
   )(options)
 }

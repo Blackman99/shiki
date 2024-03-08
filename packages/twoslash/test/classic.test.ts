@@ -10,7 +10,7 @@ html, body { margin: 0; }
 </style>
 `
 
-const transformer = transformerTwoslash({
+const transformer = await transformerTwoslash({
   renderer: rendererClassic(),
 })
 

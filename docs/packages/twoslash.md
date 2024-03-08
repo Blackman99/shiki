@@ -30,7 +30,7 @@ const html = await codeToHtml(`console.log()`, {
   lang: 'ts',
   theme: 'vitesse-dark',
   transformers: [
-    transformerTwoslash(), // <-- here
+    await transformerTwoslash(), // <-- here
     // ...
   ],
 })

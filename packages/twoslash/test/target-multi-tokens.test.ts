@@ -22,7 +22,7 @@ it('should split tokens correctly', async () => {
     lang: 'ts',
     theme: 'vitesse-dark',
     transformers: [
-      transformerTwoslash({
+      await transformerTwoslash({
         twoslashOptions: {
           handbookOptions: {
             errors: [2322],

@@ -112,7 +112,7 @@ export default withMermaid(defineConfig({
           return code
         },
       },
-      transformerTwoslash({
+      await transformerTwoslash({
         // errorRendering: 'hover',
         processHoverInfo(info) {
           return defaultHoverInfoProcessor(info)

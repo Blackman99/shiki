@@ -24,7 +24,7 @@ it('should split tokens correctly', async () => {
     lang: 'ts',
     theme: 'min-dark',
     transformers: [
-      transformerTwoslash(),
+      await transformerTwoslash(),
     ],
   })
 

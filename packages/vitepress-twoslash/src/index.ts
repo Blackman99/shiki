@@ -22,7 +22,7 @@ export interface VitePressPluginTwoslashOptions extends TransformerTwoslashOptio
  *
  * Add this to `markdown.codeTransformers` in `.vitepress/config.ts`
  */
-export function transformerTwoslash(options: VitePressPluginTwoslashOptions = {}): ShikiTransformer {
+export async function transformerTwoslash(options: VitePressPluginTwoslashOptions = {}): Promise<ShikiTransformer> {
   const {
     explicitTrigger = true,
   } = options
@@ -40,7 +40,7 @@ export function transformerTwoslash(options: VitePressPluginTwoslashOptions = {}
   }
 
   const twoslash = createTransformerFactory(
-    createTwoslasher(),
+    await createTwoslasher(),
   )({
     langs: ['ts', 'tsx', 'js', 'jsx', 'json', 'vue'],
     renderer: rendererFloatingVue(options),
